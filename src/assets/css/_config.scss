@@ -1,0 +1,54 @@
+$primary-color: #fff;
+$secondary-color: rgb(0, 0, 255);
+$tertiary-color: #83f;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+*::before,
+*::after {
+	margin: none;
+	padding: none;
+	box-sizing: border-box;
+}
+
+li,
+ul,
+ol {
+	list-style: none;
+}
+
+@mixin button() {
+	display: inline-block;
+	height: 40px;
+	padding: 0 10px;
+	line-height: 40px;
+	border-radius: 10px;
+	width: 120px;
+	text-align: center;
+	margin: 10px;
+}
+@mixin whiteBtn() {
+	@include button();
+	border: 1px solid $primary-color;
+	color: $primary-color;
+}
+
+@mixin blueBtn() {
+	@include button();
+	border: 1px solid $secondary-color;
+	color: $secondary-color;
+}
+
+@mixin easeOut() {
+	transition: all 0.6s ease-in-out;
+}
+@keyframes spin-360 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

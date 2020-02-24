@@ -1,0 +1,17 @@
+@import "./config";
+@import "./header";
+@import "./search";
+@import "./tag";
+@import "./card";
+@import "./footer";
+
+.blue-button {
+	@include blueBtn();
+}
+
+.white-button {
+	@include whiteBtn();
+}
+.App {
+	background: $primary-color;
+}

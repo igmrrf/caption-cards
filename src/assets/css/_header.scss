@@ -1,0 +1,53 @@
+.navbar {
+	form {
+		margin-left: auto;
+		input {
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid white;
+			color: white;
+			@include easeOut();
+			&:hover {
+				background-color: rgb(65, 89, 116);
+			}
+		}
+		.navbar-search-button {
+			border-radius: 20px;
+			height: 40px;
+		}
+	}
+	.brand {
+		position: relative;
+		width: 100px;
+		margin-top: -50px;
+		animation: spin-360 infinite 20s linear;
+		.top-brand {
+			left: 0;
+			position: absolute;
+			display: inline-block;
+			width: 75px;
+			height: 30px;
+			border-radius: 10px;
+			z-index: 2;
+			background: transparentize(#00a846, 0.5);
+		}
+		.bottom-brand {
+			z-index: 1;
+			left: 25%;
+			position: absolute;
+			display: inline-block;
+			width: 50px;
+			height: 40px;
+			border-radius: 10px;
+			background: transparentize(#e74747, 0.5);
+		}
+	}
+}
+
+@media screen and(max-width: 760px) {
+	.navbar {
+		form {
+			display: none;
+		}
+	}
+}

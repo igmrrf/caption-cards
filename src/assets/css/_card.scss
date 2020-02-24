@@ -1,0 +1,19 @@
+.Cards {
+	margin: 10px;
+	padding: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.single-card {
+		background: rgb(4, 15, 44);
+		margin: 10px;
+		font-size: larger;
+		font-weight: 400;
+		width: 300px;
+		min-height: 250px;
+		color: white;
+		padding: 20px 10px;
+	}
+}

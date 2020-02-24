@@ -1,0 +1,47 @@
+import React from "react";
+import "./App.css";
+import Api from "./api";
+
+import { Card, Container, Col, Row } from "react-bootstrap";
+
+class App extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			captions: [],
+			caption: "",
+			tags: [],
+			tag: []
+		};
+	}
+	componentDidMount() {
+		Api.get("caption/").then(res => {
+			const captions = res.data.data.captions;
+			this.setState({ captions: captions });
+			console.log(this.state.captions);
+		});
+	}
+	render() {
+		const { captions } = this.state;
+		return (
+			<Container>
+				<Row className="Cards">
+					{Object.keys(captions).map((k, i) => {
+						let data = captions[k];
+						return (
+							<Col md={4} key={i}>
+								<Card className="single-card">
+									<Card.Body>
+										<Card.Title>{data.caption}</Card.Title>
+									</Card.Body>
+								</Card>
+							</Col>
+						);
+					})}
+				</Row>
+			</Container>
+		);
+	}
+}
+
+export default App;

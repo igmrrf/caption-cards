@@ -1,0 +1,11 @@
+.Tags {
+	margin: 10px;
+	padding: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	.single-tag {
+		@include blueBtn();
+	}
+}
