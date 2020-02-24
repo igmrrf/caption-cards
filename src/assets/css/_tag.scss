@@ -4,8 +4,23 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: center;
 	.single-tag {
-		@include blueBtn();
+		display: flex;
+		justify-content: space-evenly;
+		height: 40px;
+		padding: 0 10px;
+		line-height: 40px;
+		border-radius: 10px;
+		width: 120px;
+		text-align: center;
+		margin: 10px;
+		border: 1px solid $tertiary-color;
+		color: $white-color;
+		background: $tertiary-color;
+		font-weight: bolder;
+		.icon {
+			cursor: pointer;
+		}
 	}
 }

@@ -1,18 +1,16 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-export default function index() {
+export default function index(props) {
 	return (
 		<Card className="single-card">
-			<Card.Header>Featured</Card.Header>
+			<Card.Header>{props.tag}</Card.Header>
 			<Card.Body>
-				<Card.Title>Special title treatment</Card.Title>
-				<Card.Text>
-					With supporting text below as a natural lead-in to additional content.
-				</Card.Text>
-				<Button variant="primary">Go somewhere</Button>
+				<Card.Title>{props.caption}</Card.Title>
 			</Card.Body>
-			<Card.Footer className="text-muted">2 days ago</Card.Footer>
+			<Card.Footer className="text-muted ">
+				<Button variant="danger">view more</Button>
+			</Card.Footer>
 		</Card>
 	);
 }

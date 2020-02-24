@@ -13,5 +13,5 @@
 	@include whiteBtn();
 }
 .App {
-	background: $primary-color;
+	background: transparentize($primary-color, 0.1);
 }

@@ -1,31 +1,32 @@
 import React from "react";
 import {
 	Container,
-	Row,
-	Col,
 	Nav,
 	Form,
 	FormControl,
 	Button,
 	Navbar
 } from "react-bootstrap";
+import logo from "../../assets/img/logo.png";
 
 export default function index() {
 	return (
-		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+		<Navbar collapseOnSelect expand="lg" bg="light">
 			<Container>
-				<div className="brand">
-					<div className="top-brand"></div>
-					<div className="bottom-brand"></div>
-				</div>
-				<Navbar.Brand href="#home">
-					<h2>Caption Cards</h2>
+				<Navbar.Brand href="/" className="brand">
+					<img src={logo} alt="logo" className="nav-brand-img" />
+
+					<p>CaptionCards</p>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Form inline>
-						<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-						<Button variant="outline-light" className="navbar-search-button">
+						<FormControl
+							type="text"
+							placeholder="Search"
+							className="search-input mr-sm-2"
+						/>
+						<Button variant="outline-dark" className="navbar-search-button">
 							Search
 						</Button>
 					</Form>

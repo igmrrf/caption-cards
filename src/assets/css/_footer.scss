@@ -1,0 +1,17 @@
+.footer-row {
+	background: transparentize($secondary-color, 0.8);
+	padding: 10px 0;
+	color: $primary-color;
+	font-weight: 400;
+}
+.footer-row-2 {
+	background-color: $secondary-color;
+	color: $primary-color;
+	font-size: larger;
+	.container-fluid {
+		a {
+			color: $primary-color;
+			font-size: 1.5em;
+		}
+	}
+}

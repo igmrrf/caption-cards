@@ -3,9 +3,9 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
 	return (
-		<MDBFooter color="indigo" className="font-small pt-4 mt-4">
+		<MDBFooter className="font-small pt-4 mt-4">
 			<MDBContainer fluid className="text-center text-md-left">
-				<MDBRow>
+				<MDBRow className="footer-row">
 					<MDBCol md="4">
 						<h3 className="title">Caption Cards</h3>
 						<p>
@@ -22,34 +22,22 @@ const FooterPage = () => {
 							<li className="footer-link">
 								<a href="#!">API Sponsor</a>
 							</li>
-							<li className="footer-link">
-								<a href="#!">About</a>
-							</li>
-							<li className="footer-link">
-								<a href="#!">Contact</a>
-							</li>
 						</ul>
 					</MDBCol>
 					<MDBCol md="4">
-						<h5 className="title">Follow Me Everywhere</h5>
+						<h5 className="title">Follow and Star Us at</h5>
 						<ul className="footer-links">
-							<li className="footer-link">
-								<a href="#!">Facebook</a>
-							</li>
-							<li className="footer-link">
-								<a href="#!">Twitter</a>
-							</li>
 							<li className="footer-link">
 								<a href="#!">Github</a>
 							</li>
 							<li className="footer-link">
-								<a href="#!">LinkedIn</a>
+								<a href="#!">Facebook</a>
 							</li>
 						</ul>
 					</MDBCol>
 				</MDBRow>
 			</MDBContainer>
-			<div className="footer-copyright text-center py-3">
+			<div className="footer-row-2 text-center py-3">
 				<MDBContainer fluid>
 					&copy; {new Date().getFullYear()} Copyright:{" "}
 					<a href="https://igmrrf.github.io/me"> IGMRRF </a>
