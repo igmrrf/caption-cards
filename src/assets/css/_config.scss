@@ -24,7 +24,7 @@ ol {
 	list-style: none;
 }
 
-@mixin button() {
+@mixin tertiaryBtn() {
 	display: inline-block;
 	height: 40px;
 	padding: 0 10px;
@@ -33,24 +33,14 @@ ol {
 	width: 120px;
 	text-align: center;
 	margin: 10px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	&:hover {
 		@include scaleOut();
 		background: darken($tertiary-color, 3);
 	}
-}
-
-@mixin whiteBtn() {
-	@include button();
-	border: 1px solid $primary-color;
-	color: $primary-color;
-	background: white;
-}
-
-@mixin blueBtn() {
-	@include button();
-	border: none;
 	color: $white-color;
-	background: #21218d;
 }
 @mixin singleCard() {
 	background: $card-background;
@@ -62,11 +52,9 @@ ol {
 	color: $black-color;
 	border-radius: 30px;
 	padding: 20px 10px;
-
 	@include easeOut();
 	&:hover {
-		transform: scale(1.05);
-		box-shadow: 0 5px 10px $white-color;
+		box-shadow: 0 5px 10px $tertiary-color;
 	}
 }
 

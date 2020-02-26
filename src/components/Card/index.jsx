@@ -9,7 +9,7 @@ export default function index(props) {
 				<Card.Title>{props.caption}</Card.Title>
 			</Card.Body>
 			<Card.Footer className="text-muted ">
-				<Button variant="success" className="blue-button">
+				<Button variant="success" className="tertiary-button">
 					view more
 				</Button>
 				ID:{props.tag}

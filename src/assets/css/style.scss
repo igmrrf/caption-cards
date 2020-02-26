@@ -6,13 +6,11 @@
 @import "./footer";
 @import "./form";
 
-.blue-button {
-	@include blueBtn();
+.tertiary-button {
+	@include tertiaryBtn();
 }
 
-.white-button {
-	@include whiteBtn();
-}
+
 .App {
 	background: linear-gradient(
 		113.61deg,
