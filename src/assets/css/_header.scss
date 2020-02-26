@@ -1,5 +1,4 @@
 .navbar {
-	color: $black-color;
 	form {
 		margin-left: auto;
 		input {
@@ -8,15 +7,26 @@
 			border-bottom: 2px solid $tertiary-color;
 			@include easeOut();
 			&:hover {
-				background-color: #fff6f4;;
+				background-color: #fff6f4;
 			}
 		}
-		button {
-			color: $black-color;
-		}
 		.navbar-search-button {
+			color: white !important;
 			border-radius: 20px;
 			height: 40px;
+		}
+	}
+	.navbar-nav {
+		.nav-link {
+			margin-right: 5px;
+			border-radius: 20%;
+			font-weight: 400;
+			color: white !important;
+			@include easeOut();
+			&:hover {
+				@include scaleOut();
+				box-shadow: 1px 1px 1px 1px $tertiary-color;
+			}
 		}
 	}
 	.brand {

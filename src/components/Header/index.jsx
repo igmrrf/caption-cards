@@ -11,8 +11,8 @@ import logo from "../../assets/img/logo.png";
 
 export default function index() {
 	return (
-		<Navbar collapseOnSelect expand="lg" bg="light">
-			<Container>
+		<Navbar collapseOnSelect expand="md" variant="dark" bg="primary">
+			<Container fluid>
 				<Navbar.Brand href="/" className="brand">
 					<img src={logo} alt="logo" className="nav-brand-img" />
 
@@ -26,12 +26,14 @@ export default function index() {
 							placeholder="Search"
 							className="search-input mr-sm-2"
 						/>
-						<Button variant="outline-dark" className="navbar-search-button">
+						<Button variant="outline-primary" className="navbar-search-button">
 							Search
 						</Button>
 					</Form>
 					<Nav className="ml-auto">
-						<Nav.Link href="/browse">Browse</Nav.Link>
+						<Nav.Link href="/browse" className="current">
+							Browse
+						</Nav.Link>
 						<Nav.Link href="/random">Random</Nav.Link>
 						<Nav.Link href="/contribute">Contribute</Nav.Link>
 					</Nav>

@@ -1,16 +1,22 @@
 .footer-row {
-	background: transparentize($secondary-color, 0.8);
-	padding: 10px 0;
-	color: $primary-color;
+	background: $white-color;
 	font-weight: 400;
+	color: $black-color;
+	ul {
+		li {
+			a {
+				color: $black-color;
+			}
+		}
+	}
 }
 .footer-row-2 {
-	background-color: $secondary-color;
-	color: $primary-color;
+	background-color: $white-color;
+	color: $secondary-color;
 	font-size: larger;
 	.container-fluid {
 		a {
-			color: $primary-color;
+			color: $secondary-color;
 			font-size: 1.5em;
 		}
 	}

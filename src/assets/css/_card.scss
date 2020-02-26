@@ -1,26 +1,23 @@
 .Cards {
-	margin: 10px;
+	padding: 20px 0px 20px;
 	padding: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-
 	.single-card {
-		background: $card-background;
-		margin: 10px;
-		font-size: larger;
-		font-weight: 400;
-		width: 300px;
-		min-height: 250px;
-		color: $white-color;
-		border-radius: 30px;
-		padding: 20px 10px;
-
-		@include easeOut();
-		&:hover {
-			transform: scale(1.05);
-			box-shadow: 0 5px 10px $white-color;
-		}
+		@include singleCard();
+	}
+}
+@media screen and (max-width: 760px) {
+	.Cards {
+		padding: 0;
+		margin: -30px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.Cards {
+		margin: auto;
+		justify-content: center;
 	}
 }

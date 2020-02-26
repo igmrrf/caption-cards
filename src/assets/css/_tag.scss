@@ -1,5 +1,4 @@
 .Tags {
-	margin: 10px;
 	padding: auto;
 	display: flex;
 	flex-direction: row;
@@ -18,7 +17,11 @@
 		border: 1px solid $tertiary-color;
 		color: $white-color;
 		background: $tertiary-color;
+
 		font-weight: bolder;
+		&:hover {
+			@include scaleOut();
+		}
 		.icon {
 			cursor: pointer;
 		}

@@ -1,0 +1,2 @@
+export const FETCH_CAPTIONS ="FETCH_CAPTIONS";
+export const FETCH_TAGS = "FETCH_TAGS";

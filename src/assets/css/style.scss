@@ -4,6 +4,7 @@
 @import "./tag";
 @import "./card";
 @import "./footer";
+@import "./form";
 
 .blue-button {
 	@include blueBtn();
@@ -13,5 +14,10 @@
 	@include whiteBtn();
 }
 .App {
-	background: transparentize($primary-color, 0.1);
+	background: linear-gradient(
+		113.61deg,
+		$white-color 34.8%,
+		$primary-color 34.8%
+	);
+	min-height: 60vh;
 }

@@ -41,10 +41,6 @@ ol {
   }
 }
 
-.navbar {
-  color: #000000;
-}
-
 .navbar form {
   margin-left: auto;
 }
@@ -52,7 +48,7 @@ ol {
 .navbar form input {
   background: transparent;
   border: none;
-  border-bottom: 2px solid #850d75;
+  border-bottom: 2px solid #10d876;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
@@ -61,13 +57,26 @@ ol {
   background-color: #fff6f4;
 }
 
-.navbar form button {
-  color: #000000;
-}
-
 .navbar form .navbar-search-button {
+  color: white !important;
   border-radius: 20px;
   height: 40px;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-right: 5px;
+  border-radius: 20%;
+  font-weight: 400;
+  color: white !important;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 1px 1px 1px 1px #10d876;
+          box-shadow: 1px 1px 1px 1px #10d876;
 }
 
 .navbar .brand {
@@ -97,6 +106,13 @@ ol {
   }
 }
 
+.search {
+  margin: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media screen and (min-width: 761px) {
   .search {
     display: none;
@@ -104,7 +120,6 @@ ol {
 }
 
 .Tags {
-  margin: 10px;
   padding: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,10 +149,15 @@ ol {
   width: 120px;
   text-align: center;
   margin: 10px;
-  border: 1px solid #850d75;
-  color: #f0f0f0;
-  background: #850d75;
+  border: 1px solid #10d876;
+  color: #ffffff;
+  background: #10d876;
   font-weight: bolder;
+}
+
+.Tags .single-tag:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .Tags .single-tag .icon {
@@ -145,7 +165,7 @@ ol {
 }
 
 .Cards {
-  margin: 10px;
+  padding: 20px 0px 20px;
   padding: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,13 +182,13 @@ ol {
 }
 
 .Cards .single-card {
-  background: #1a1449;
+  background: #ffffff;
   margin: 10px;
   font-size: larger;
   font-weight: 400;
-  width: 300px;
-  min-height: 250px;
-  color: #f0f0f0;
+  width: 250px;
+  min-height: 200px;
+  color: #212121;
   border-radius: 30px;
   padding: 20px 10px;
   -webkit-transition: all 0.6s ease-in-out;
@@ -178,26 +198,89 @@ ol {
 .Cards .single-card:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-box-shadow: 0 5px 10px #f0f0f0;
-          box-shadow: 0 5px 10px #f0f0f0;
+  -webkit-box-shadow: 0 5px 10px #ffffff;
+          box-shadow: 0 5px 10px #ffffff;
+}
+
+@media screen and (max-width: 760px) {
+  .Cards {
+    padding: 0;
+    margin: -30px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Cards {
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer-row {
-  background: rgba(224, 224, 224, 0.2);
-  padding: 10px 0;
-  color: #1a1449;
+  background: #ffffff;
   font-weight: 400;
+  color: #212121;
+}
+
+.footer-row ul li a {
+  color: #212121;
 }
 
 .footer-row-2 {
-  background-color: #e0e0e0;
-  color: #1a1449;
+  background-color: #ffffff;
+  color: #363636;
   font-size: larger;
 }
 
 .footer-row-2 .container-fluid a {
-  color: #1a1449;
+  color: #363636;
   font-size: 1.5em;
+}
+
+.contribute-form {
+  padding: 30px 40px 39px;
+}
+
+.contribute-form .title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 28px;
+  position: relative;
+  display: inline-block;
+}
+
+.contribute-form .title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -24px;
+  width: 100%;
+  height: 1px;
+  background: #10d876;
+}
+
+.single-card {
+  background: #ffffff;
+  margin: 10px;
+  font-size: larger;
+  font-weight: 400;
+  width: 250px;
+  min-height: 200px;
+  color: #212121;
+  border-radius: 30px;
+  padding: 20px 10px;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.single-card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 5px 10px #ffffff;
+          box-shadow: 0 5px 10px #ffffff;
 }
 
 .blue-button {
@@ -209,8 +292,15 @@ ol {
   width: 120px;
   text-align: center;
   margin: 10px;
-  border: 1px solid #e0e0e0;
-  color: #e0e0e0;
+  border: none;
+  color: #ffffff;
+  background: #21218d;
+}
+
+.blue-button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background: #0fca6e;
 }
 
 .white-button {
@@ -222,11 +312,19 @@ ol {
   width: 120px;
   text-align: center;
   margin: 10px;
-  border: 1px solid #1a1449;
-  color: #1a1449;
+  border: 1px solid #4285f4;
+  color: #4285f4;
+  background: white;
+}
+
+.white-button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background: #0fca6e;
 }
 
 .App {
-  background: rgba(26, 20, 73, 0.9);
+  background: linear-gradient(113.61deg, #ffffff 34.8%, #4285f4 34.8%);
+  min-height: 60vh;
 }
 /*# sourceMappingURL=style.css.map */

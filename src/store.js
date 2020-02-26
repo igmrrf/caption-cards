@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import allReducer from "./reducers";
 
 const initialState = {};
-const middleware = { thunk };
+const middleware = [thunk];
 
 const store = createStore(
 	allReducer,
