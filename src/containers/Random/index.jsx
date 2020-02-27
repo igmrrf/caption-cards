@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Card from "../../components/Card";
 import API from "../../api";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export class index extends Component {
 	constructor() {
@@ -23,12 +26,18 @@ export class index extends Component {
 	render() {
 		const { captions } = this.state;
 		return (
-			<div className="Cards">
-				{Object.keys(captions).map((k, i) => {
-					let data = captions[k];
-					return <Card key={k} tag={data.id} caption={data.caption} />;
-				})}
-			</div>
+			<Container className="Random">
+				<Row>
+					<Col>
+						<div className="Cards">
+							{Object.keys(captions).map((k, i) => {
+								let data = captions[k];
+								return <Card key={k} tag={data.id} caption={data.caption} />;
+							})}
+						</div>
+					</Col>
+				</Row>
+			</Container>
 		);
 	}
 }

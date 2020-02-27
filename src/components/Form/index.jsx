@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import API from "../../api";
+import CardForm from "../Card";
 
 export default class index extends React.Component {
 	constructor() {
@@ -30,10 +31,10 @@ export default class index extends React.Component {
 	render() {
 		const { caption, tag, success, errMessage } = this.state;
 		return (
-			<Container>
+			<Container className="contribute-form">
 				<Row>
 					<Col md={5}>
-						<div className="contribute-form" data-aos="slide-left">
+						<div data-aos="slide-left">
 							<Form>
 								<Form.Group>
 									<Form.Label>
@@ -65,24 +66,15 @@ export default class index extends React.Component {
 									name="submit"
 									type="submit"
 									onClick={this.onSubmitCaption}
-									className="blue-button"
+									className="tertiary-button"
 								>
-									Submit Review
+									Submit
 								</button>
 							</Form>
 						</div>
 					</Col>
-					<Col md={4}>
-						<Card className="single-card">
-							<Card.Header>{tag}</Card.Header>
-							<Card.Body>
-								<Card.Title>{caption}</Card.Title>
-							</Card.Body>
-							<Card.Footer className="text-muted ">
-								<Button variant="danger">view more</Button>
-							</Card.Footer>
-						</Card>
-					</Col>
+					<Col md={4}></Col>
+					<CardForm tag="" caption={caption} />
 				</Row>
 			</Container>
 		);

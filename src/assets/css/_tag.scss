@@ -6,10 +6,13 @@
 	justify-content: center;
 	.single-tag {
 		@include tertiaryBtn();
-		background: $tertiary-color;
+		color: $tertiary-color;
 		font-weight: bolder;
 		display: flex;
 		justify-content: space-evenly;
+		&:hover {
+			cursor: pointer;
+		}
 
 		.icon {
 			cursor: pointer;

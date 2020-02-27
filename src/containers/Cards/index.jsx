@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import Card from "../../components/Card";
-import { fetchCaptions } from "../../actions/captionAction";
+import { getCaptions } from "../../actions/captionAction";
 import { Container, Row, Col } from "react-bootstrap";
 
 export class index extends Component {
 	UNSAFE_componentWillMount() {
 		console.log("ComponentWillMount");
-		this.props.fetchCaptions();
+		this.props.getCaptions();
 	}
 
 	render() {
@@ -16,15 +16,15 @@ export class index extends Component {
 			<Card key={caption.id} caption={caption.caption} tag={caption.id} />
 		));
 		return (
-			<Container>
-				<h1>Cards in the Databse</h1>
+			<Container className="card-begin">
+				<h1>Caption Cards</h1>
 				<div className="Cards">{captionCaptions}</div>
 			</Container>
 		);
 	}
 }
 index.propTypes = {
-	fetchCaptions: PropTypes.func.isRequired,
+	getCaptions: PropTypes.func.isRequired,
 	Captions: PropTypes.array.isRequired
 };
 
@@ -32,4 +32,4 @@ const mapStateToProps = state => ({
 	captions: state.captions.captions
 });
 
-export default connect(mapStateToProps, { fetchCaptions })(index);
+export default connect(mapStateToProps, { getCaptions })(index);

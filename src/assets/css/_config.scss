@@ -25,6 +25,7 @@ ol {
 }
 
 @mixin tertiaryBtn() {
+	position: relative;
 	display: inline-block;
 	height: 40px;
 	padding: 0 10px;
@@ -36,11 +37,51 @@ ol {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	color: $tertiary-color;
 	&:hover {
 		@include scaleOut();
-		background: darken($tertiary-color, 3);
+		background: $tertiary-color;
+		color: $white-color;
+		box-shadow: 0 0 50px $tertiary-color;
+		transition-delay: 0.5s;
+		border-radius: 0;
 	}
-	color: $white-color;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 10px;
+		height: 10px;
+		border-top: 2px solid $tertiary-color;
+		border-left: 2px solid $tertiary-color;
+		transition: 0.5s;
+		transition-delay: 0.5s;
+	}
+	&:hover:before {
+		width: 100%;
+		height: 100%;
+
+		transition-delay: 0s;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 10px;
+		height: 10px;
+		border-bottom: 2px solid $tertiary-color;
+		border-right: 2px solid $tertiary-color;
+		transition: 0.5s;
+		transition-delay: 0.5s;
+	}
+	&:hover:after {
+		width: 100%;
+		height: 100%;
+
+		transition-delay: 0s;
+	}
 }
 @mixin singleCard() {
 	background: $card-background;
@@ -57,6 +98,52 @@ ol {
 		box-shadow: 0 5px 10px $tertiary-color;
 	}
 }
+
+// @mixin tertiaryBtn() {
+// 	position: relative;
+// 	padding: 2px 30px;
+// 	margin: 5px 15px;
+// 	text-decoration: none;
+// 	text-transform: none;
+// 	color: $tertiary-color;
+// 	letter-spacing: 2px;
+// 	font-size: 20px;
+// 	transition: 0.5s;
+// 	&:hover {
+// 		background-color: $tertiary-color;
+// 		color: $white-color;
+// 	}
+// 	&::before {
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 10px;
+// 		height: 10px;
+// 		border-top: 2px solid $primary-color;
+// 		border-left: 2px solid $primary-color;
+// 		transition: 0.5s;
+// 	}
+// 	&:hover:before {
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// 	&::after {
+// 		content: "";
+// 		position: absolute;
+// 		bottom: 0;
+// 		right: 0;
+// 		width: 10px;
+// 		height: 10px;
+// 		border-bottom: 2px solid $primary-color;
+// 		border-right: 2px solid $primary-color;
+// 		transition: 0.5s;
+// 	}
+// 	&:hover:after {
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// }
 
 @mixin easeOut() {
 	transition: all 0.6s ease-in-out;

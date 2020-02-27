@@ -1,0 +1,23 @@
+.Banner {
+	position: relative;
+	height: 90vh;
+	background-color: $primary-color;
+	padding-top: 120px;
+	color: white;
+	h3 {
+		font-weight: 400;
+	}
+	h1 {
+		font-size: 5em;
+		font-weight: 800;
+	}
+	h4 {
+		font-weight: 500;
+	}
+	.banner-line {
+		background-color: darken($primary-color, 6);
+		margin-top: 150px;
+		height: 50px;
+		z-index: 2;
+	}
+}

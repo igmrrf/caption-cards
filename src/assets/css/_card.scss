@@ -9,6 +9,14 @@
 		@include singleCard();
 	}
 }
+.card-begin {
+	h1 {
+		color: $tertiary-color;
+		font-size: 4em;
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+}
 @media screen and (max-width: 760px) {
 	.Cards {
 		padding: 0;

@@ -1,12 +1,12 @@
-import { FETCH_CAPTIONS } from "./type";
+import { GET_CAPTIONS } from "./type";
 import API from "../api";
 
-export const fetchCaptions = () => dispatch => {
+export const getCaptions = () => dispatch => {
 	API.get("caption/").then(res => {
 		console.log(res);
 		const captions = res.data.data.captions;
 		dispatch({
-			type: FETCH_CAPTIONS,
+			type: GET_CAPTIONS,
 			payload: captions
 		});
 		console.log(captions);

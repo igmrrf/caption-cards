@@ -1,4 +1,4 @@
-import { FETCH_CAPTIONS } from "../actions/type";
+import { GET_CAPTIONS } from "../actions/type";
 
 const initialState = {
 	captions: []
@@ -6,7 +6,7 @@ const initialState = {
 
 export default function(state = initialState, action) {
 	switch (action.type) {
-		case FETCH_CAPTIONS:
+		case GET_CAPTIONS:
 			return {
 				...state,
 				captions: action.payload

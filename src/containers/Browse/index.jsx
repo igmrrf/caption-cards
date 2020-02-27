@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
+import Cards from "../Cards";
 
 export default function index() {
-    return (
-        <div className="App">
-            <h1>Browse Caption Cards</h1>
-            
-        </div>
-    )
+	return (
+		<div className="App">
+			<Cards />
+		</div>
+	);
 }

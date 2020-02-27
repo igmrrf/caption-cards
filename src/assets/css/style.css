@@ -136,6 +136,7 @@ ol {
 }
 
 .Tags .single-tag {
+  position: relative;
   display: inline-block;
   height: 40px;
   padding: 0 10px;
@@ -150,8 +151,8 @@ ol {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  color: #ffffff;
-  background: #10d876;
+  color: #10d876;
+  color: #10d876;
   font-weight: bolder;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,7 +165,61 @@ ol {
 .Tags .single-tag:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  background: #0fca6e;
+  background: #10d876;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 50px #10d876;
+          box-shadow: 0 0 50px #10d876;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  border-radius: 0;
+}
+
+.Tags .single-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #10d876;
+  border-left: 2px solid #10d876;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.Tags .single-tag:hover:before {
+  width: 100%;
+  height: 100%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.Tags .single-tag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #10d876;
+  border-right: 2px solid #10d876;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.Tags .single-tag:hover:after {
+  width: 100%;
+  height: 100%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.Tags .single-tag:hover {
+  cursor: pointer;
 }
 
 .Tags .single-tag .icon {
@@ -207,6 +262,13 @@ ol {
           box-shadow: 0 5px 10px #10d876;
 }
 
+.card-begin h1 {
+  color: #10d876;
+  font-size: 4em;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
 @media screen and (max-width: 760px) {
   .Cards {
     padding: 0;
@@ -245,26 +307,32 @@ ol {
 }
 
 .contribute-form {
-  padding: 30px 40px 39px;
+  padding: 100px 40px 39px;
 }
 
 .contribute-form .title {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 700;
   margin: 0;
   margin-bottom: 28px;
   position: relative;
   display: inline-block;
+  color: #10d876;
 }
 
 .contribute-form .title::after {
   position: absolute;
   content: "";
   left: 0;
-  bottom: -24px;
+  bottom: -10px;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: #10d876;
+}
+
+.contribute-form form input:hover,
+.contribute-form form textarea:hover {
+  border: 2px solid #10d876;
 }
 
 .single-card {
@@ -286,7 +354,42 @@ ol {
           box-shadow: 0 5px 10px #10d876;
 }
 
+.Banner {
+  position: relative;
+  height: 90vh;
+  background-color: #4285f4;
+  padding-top: 120px;
+  color: white;
+}
+
+.Banner h3 {
+  font-weight: 400;
+}
+
+.Banner h1 {
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.Banner h4 {
+  font-weight: 500;
+}
+
+.Banner .banner-line {
+  background-color: #2572f2;
+  margin-top: 150px;
+  height: 50px;
+  z-index: 2;
+}
+
+.Random {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden scroll;
+}
+
 .tertiary-button {
+  position: relative;
   display: inline-block;
   height: 40px;
   padding: 0 10px;
@@ -301,13 +404,63 @@ ol {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  color: #ffffff;
+  color: #10d876;
 }
 
 .tertiary-button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  background: #0fca6e;
+  background: #10d876;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 50px #10d876;
+          box-shadow: 0 0 50px #10d876;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  border-radius: 0;
+}
+
+.tertiary-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #10d876;
+  border-left: 2px solid #10d876;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.tertiary-button:hover:before {
+  width: 100%;
+  height: 100%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.tertiary-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #10d876;
+  border-right: 2px solid #10d876;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.tertiary-button:hover:after {
+  width: 100%;
+  height: 100%;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .App {

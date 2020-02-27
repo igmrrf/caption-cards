@@ -5,11 +5,11 @@
 @import "./card";
 @import "./footer";
 @import "./form";
-
+@import "./banner";
+@import "./random";
 .tertiary-button {
 	@include tertiaryBtn();
 }
-
 
 .App {
 	background: linear-gradient(
