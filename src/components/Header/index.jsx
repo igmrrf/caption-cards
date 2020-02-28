@@ -43,8 +43,7 @@ export default function index() {
 							Browse
 						</Nav.Link>
 						<Nav.Link href="/random">Random</Nav.Link>
-						<Nav.Link href="/random">Random</Nav.Link>
-						{/* <Dropdown as={ButtonGroup}>
+						<Dropdown as={ButtonGroup}>
 							<Dropdown.Toggle
 								split
 								id="dropdown-split-basic"
@@ -62,7 +61,7 @@ export default function index() {
 									Add Caption with Tag(s)
 								</Dropdown.Item>
 							</Dropdown.Menu>
-						</Dropdown>*/}
+						</Dropdown>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

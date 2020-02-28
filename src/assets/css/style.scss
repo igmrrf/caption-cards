@@ -6,18 +6,24 @@
 @import "./footer";
 @import "./form";
 @import "./banner";
-@import "./random";
 @import "./modal";
 @import "./carousel";
+
+//Full Rendering CSS
+@import "./browse";
+@import "./random";
+
+//Assigning Classes to Sass Functions
 .tertiary-button {
 	@include tertiaryBtn();
 }
 
+//General Css for all Rendering Pages
 .App {
 	background: linear-gradient(
 		113.61deg,
 		$white-color 34.8%,
 		$primary-color 34.8%
 	);
-	min-height: 60vh;
+	min-height: 70vh;
 }

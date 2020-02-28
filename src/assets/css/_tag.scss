@@ -4,19 +4,19 @@
 	flex-wrap: wrap;
 	height: 50vh;
 	overflow: hidden;
-	.single-tag {
-		position: relative;
-		@include tertiaryBtn();
-		color: $tertiary-color;
-		font-weight: bolder;
-		display: flex;
-		justify-content: space-evenly;
-		&:hover {
-			cursor: pointer;
-		}
+}
+.single-tag {
+	position: relative;
+	@include tertiaryBtn();
+	color: $tertiary-color;
+	font-weight: bolder;
+	display: flex;
+	justify-content: space-evenly;
+	&:hover {
+		cursor: pointer;
+	}
 
-		.icon {
-			cursor: pointer;
-		}
+	.icon {
+		cursor: pointer;
 	}
 }

@@ -9,6 +9,7 @@ class index extends Component {
 		this.props.getTags();
 	}
 	render() {
+		
 		const tagsTags = this.props.tags.map(tag => (
 			<div className="single-tag">
 				<p>{tag}</p>

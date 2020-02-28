@@ -189,7 +189,7 @@ ol {
   overflow: hidden;
 }
 
-.Tags .single-tag {
+.single-tag {
   position: relative;
   position: relative;
   display: inline-block;
@@ -218,7 +218,7 @@ ol {
           justify-content: space-evenly;
 }
 
-.Tags .single-tag:hover {
+.single-tag:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background: #10d876;
@@ -231,7 +231,7 @@ ol {
   border: none;
 }
 
-.Tags .single-tag::before {
+.single-tag::before {
   content: "";
   position: absolute;
   top: 0;
@@ -246,14 +246,14 @@ ol {
           transition-delay: 0.5s;
 }
 
-.Tags .single-tag:hover:before {
+.single-tag:hover:before {
   width: 100%;
   height: 100%;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.Tags .single-tag::after {
+.single-tag::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -268,18 +268,18 @@ ol {
           transition-delay: 0.5s;
 }
 
-.Tags .single-tag:hover:after {
+.single-tag:hover:after {
   width: 100%;
   height: 100%;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.Tags .single-tag:hover {
+.single-tag:hover {
   cursor: pointer;
 }
 
-.Tags .single-tag .icon {
+.single-tag .icon {
   cursor: pointer;
 }
 
@@ -298,8 +298,6 @@ ol {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .Cards .single-card {
@@ -453,12 +451,6 @@ ol {
   font-weight: 500;
 }
 
-.Random {
-  min-height: 100vh;
-  max-height: 100vh;
-  overflow: hidden scroll;
-}
-
 .Modal {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
@@ -494,6 +486,44 @@ ol {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 50px;
+}
+
+.Browse {
+  padding-top: 50px;
+}
+
+.Browse h1 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.Browse select:hover,
+.Browse input:hover {
+  border: 2px solid #10d876;
+  -webkit-box-shadow: 0 0 20px #10d876;
+          box-shadow: 0 0 20px #10d876;
+}
+
+.Browse .tag-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: 400;
+}
+
+.Browse .browse-search {
+  border-radius: 10px;
+  background: #10d876 !important;
+  font-weight: 400;
+}
+
+.Random {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden scroll;
 }
 
 .tertiary-button {
@@ -575,6 +605,6 @@ ol {
 
 .App {
   background: linear-gradient(113.61deg, #ffffff 34.8%, #4285f4 34.8%);
-  min-height: 60vh;
+  min-height: 70vh;
 }
 /*# sourceMappingURL=style.css.map */

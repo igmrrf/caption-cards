@@ -12,7 +12,6 @@ class App extends React.Component {
 				<Banner />
 				<Search />
 				<Carousel />
-				<Tags />
 				<Cards />
 			</div>
 		);

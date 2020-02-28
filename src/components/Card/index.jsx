@@ -6,20 +6,34 @@ import { getCaptions } from "../../actions/captionAction";
 import { Container, Row, Col } from "react-bootstrap";
 
 export class index extends Component {
+	constructor() {
+		super();
+		this.state = {
+			search: ""
+		};
+	}
 	UNSAFE_componentWillMount() {
 		console.log("ComponentWillMount");
 		this.props.getCaptions();
 	}
 
 	render() {
-		const captionCaptions = this.props.captions.map(caption => (
-			<Card key={caption.id} caption={caption.caption} id={caption.id} />
-		));
+		let filteredCaptions = this.props.captions.filter(caption => {
+			return caption.caption.toLowerCase().indexOf(this.state.search) !== -1;
+		});
+		const captionCaptions = filteredCaptions.map(caption => {
+			if (caption.id > 20) {
+				return null;
+			} else {
+				return (
+					<Card key={caption.id} caption={caption.caption} id={caption.id} />
+				);
+			}
+		});
 		return (
 			<Container>
 				<Row>
 					<Col>
-						<h1>Caption Cards</h1>
 						<div className="Cards">{captionCaptions}</div>
 					</Col>
 				</Row>

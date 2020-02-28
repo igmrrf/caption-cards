@@ -6,50 +6,28 @@ import Col from "react-bootstrap/Col";
 import CardForm from "../Card/Card";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import {
-	postCaption,
-	postCaptionWithTag,
-	postTags
-} from "../../actions/captionAction";
+import { postCaption } from "../../actions/captionAction";
 
 class index extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			tagOnly: false,
-			captionOnly: false,
-			captionWithTag: true,
 			caption: "",
-			tag: "",
-			success: true,
+			success: false,
 			errMessage: ""
 		};
 		this.onWriteChange = this.onWriteChange.bind(this);
 		this.onSubmitCaption = this.onSubmitCaption.bind(this);
 	}
-	onCheck(e) {
-		console.log("Console Logging"); 
-	}
+
 	onWriteChange = e => {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 
 	onSubmitCaption = e => {
 		e.preventDefault();
-		if (!this.state.tag && !this.state.caption) {
-			this.setState({ errMessage: "Both fields cannot be blank" });
-		} else if (this.state.tag === "") {
-			const captionData = {
-				caption: this.state.caption
-			};
-			this.props.postCaption(captionData);
-			this.setState({ success: true });
-		} else if (this.state.caption === "") {
-			const tagData = {
-				tag: this.state.tag
-			};
-			this.props.postTags(tagData);
-			this.setState({ success: true });
+		if (!this.state.caption) {
+			this.setState({ errMessage: "Caption field cannot be blank" });
 		} else {
 			const captionWithTagData = {
 				caption: this.state.caption,
@@ -60,15 +38,7 @@ class index extends React.Component {
 		}
 	};
 	render() {
-		const {
-			caption,
-			tag,
-			success,
-			errMessage,
-			tagOnly,
-			captionOnly,
-			captionWithTag
-		} = this.state;
+		const { caption, success, errMessage } = this.state;
 		return (
 			<Container className="contribute-form">
 				<Row>
@@ -84,6 +54,12 @@ class index extends React.Component {
 									{errMessage}
 								</div>
 
+								{success && (
+									<div className="text-success font-weight-bolder">
+										Your caption has been successfully uploaded to the database
+									</div>
+								)}
+
 								<Form.Group>
 									<Form.Control
 										id="caption"
@@ -95,8 +71,7 @@ class index extends React.Component {
 										onChange={this.onWriteChange}
 									/>
 								</Form.Group>
-								
-								
+
 								<button
 									name="submit"
 									type="submit"
@@ -110,7 +85,7 @@ class index extends React.Component {
 					</Col>
 					<Col md={1} lg={1}></Col>
 					<Col md={3} lg={4} className="mx-2 ">
-						<CardForm tags={tag} caption={caption} />
+						<CardForm caption={caption} />
 					</Col>
 				</Row>
 			</Container>
@@ -119,11 +94,7 @@ class index extends React.Component {
 }
 
 index.propTypes = {
-	postCaption: PropTypes.func.isRequired,
-	postTags: PropTypes.func.isRequired,
-	postCaptionWithTag: PropTypes.func.isRequired
+	postCaption: PropTypes.func.isRequired
 };
 
-export default connect(null, { postCaption, postCaptionWithTag, postTags })(
-	index
-);
+export default connect(null, { postCaption })(index);

@@ -11,9 +11,6 @@ export default function index() {
 						<h3>Finance""</h3>"
 						<div className="slide-card">
 							<Card />
-							<Card />
-							<Card />
-							<Card />
 						</div>
 					</div>
 				</Carousel.Item>
@@ -22,9 +19,6 @@ export default function index() {
 						<h3>Quotes</h3>"
 						<div className="slide-card">
 							<Card />
-							<Card />
-							<Card />
-							<Card />
 						</div>
 					</div>
 				</Carousel.Item>
@@ -32,9 +26,6 @@ export default function index() {
 					<div className="slide-cards">
 						<h3>Lifestyle</h3>"
 						<div className="slide-card">
-							<Card />
-							<Card />
-							<Card />
 							<Card />
 						</div>
 					</div>

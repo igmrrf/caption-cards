@@ -1,7 +1,7 @@
 # Welcome to CaptionCards!
 
 This is a simple Front-End project built with React.js while using Redux as the state manager. The API was pre-built and Documentation on the API can be seen in the link below.
-<i class="fa fa-github" id="api-documentation></i><a href="https://documenter.getpostman.com/view/7988284/SzKTvysQ?version=latest"> **API Documentation**</a>
+<i class="icon-cog" id="api-documentation></i><a href="https://documenter.getpostman.com/view/7988284/SzKTvysQ?version=latest"> **API Documentation**</a>
 
 ---
 

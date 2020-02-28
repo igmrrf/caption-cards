@@ -1,0 +1,25 @@
+.Browse {
+	padding-top: 50px;
+	h1 {
+		font-weight: 500;
+		font-size: 24px;
+	}
+	select,
+	input {
+		&:hover {
+			border: 2px solid $tertiary-color;
+			box-shadow: 0 0 20px $tertiary-color;
+		}
+	}
+	.tag-caption {
+		display: flex;
+		width: 70%;
+		justify-content: space-around;
+		font-weight: 400;
+	}
+	.browse-search {
+		border-radius: 10px;
+		background: $tertiary-color !important;
+		font-weight: 400;
+	}
+}
