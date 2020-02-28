@@ -1,0 +1,16 @@
+.Modal {
+	@include easeOut();
+	background: $tertiary-color;
+}
+.modal-dialog {
+	.modal-content {
+		border-radius: 50px;
+		background: $primary-color !important;
+		color: #ffffff;
+		input {
+			&:hover {
+				border: 2px solid $tertiary-color;
+			}
+		}
+	}
+}

@@ -63,6 +63,19 @@ ol {
   height: 40px;
 }
 
+.navbar .dropdown-menu {
+  background: #4285f4 !important;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #ffffff !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background: #ffffff;
+  color: #4285f4 !important;
+}
+
 .navbar .navbar-nav .nav-link {
   margin-right: 5px;
   border-radius: 20%;
@@ -73,6 +86,37 @@ ol {
 }
 
 .navbar .navbar-nav .nav-link:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 1px 1px 1px 1px #10d876;
+          box-shadow: 1px 1px 1px 1px #10d876;
+}
+
+.navbar .navbar-nav .contribute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 30px;
+  width: 130px;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-right: 5px;
+  border-radius: 20%;
+  font-weight: 400;
+  font-size: 15px;
+  color: white !important;
+  text-transform: none;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.navbar .navbar-nav .contribute:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-box-shadow: 1px 1px 1px 1px #10d876;
@@ -92,17 +136,27 @@ ol {
   margin: none;
 }
 
+.navbar .brand h1 {
+  font-weight: 500;
+  background-clip: text;
+  background: -webkit-linear-gradient(yellow, red, grey, green, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .navbar .brand .nav-brand-img {
   display: inline-block;
   -webkit-animation: spin-360 infinite 20s linear;
           animation: spin-360 infinite 20s linear;
   height: 10vh;
-  margin-right: 10px;
 }
 
 @media screen and (max-width: 760px) {
   .navbar form {
     display: none;
+  }
+  .navbar .brand h1 {
+    font-size: calc(0.5em + 5vw);
   }
 }
 
@@ -111,6 +165,8 @@ ol {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: white;
+  width: 50vw;
 }
 
 @media screen and (min-width: 761px) {
@@ -120,7 +176,6 @@ ol {
 }
 
 .Tags {
-  padding: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,12 +185,12 @@ ol {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 50vh;
+  overflow: hidden;
 }
 
 .Tags .single-tag {
+  position: relative;
   position: relative;
   display: inline-block;
   height: 40px;
@@ -145,6 +200,7 @@ ol {
   width: 120px;
   text-align: center;
   margin: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -171,7 +227,8 @@ ol {
           box-shadow: 0 0 50px #10d876;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
-  border-radius: 0;
+  border-radius: 10px;
+  border: none;
 }
 
 .Tags .single-tag::before {
@@ -241,6 +298,8 @@ ol {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .Cards .single-card {
@@ -356,10 +415,29 @@ ol {
 
 .Banner {
   position: relative;
-  height: 90vh;
+  min-height: 90vh;
   background-color: #4285f4;
   padding-top: 120px;
   color: white;
+  margin-bottom: 10px;
+}
+
+.Banner .banner-line {
+  position: absolute;
+  bottom: 0;
+  background-color: #1b6cf2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
 }
 
 .Banner h3 {
@@ -367,7 +445,7 @@ ol {
 }
 
 .Banner h1 {
-  font-size: 5em;
+  font-size: calc(2em + 5vw);
   font-weight: 800;
 }
 
@@ -375,17 +453,47 @@ ol {
   font-weight: 500;
 }
 
-.Banner .banner-line {
-  background-color: #2572f2;
-  margin-top: 150px;
-  height: 50px;
-  z-index: 2;
-}
-
 .Random {
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden scroll;
+}
+
+.Modal {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  background: #10d876;
+}
+
+.modal-dialog .modal-content {
+  border-radius: 50px;
+  background: #4285f4 !important;
+  color: #ffffff;
+}
+
+.modal-dialog .modal-content input:hover {
+  border: 2px solid #10d876;
+}
+
+.slide-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  min-height: 70vh;
+}
+
+.slide-cards .slide-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
 }
 
 .tertiary-button {
@@ -398,6 +506,7 @@ ol {
   width: 120px;
   text-align: center;
   margin: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -416,7 +525,8 @@ ol {
           box-shadow: 0 0 50px #10d876;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
-  border-radius: 0;
+  border-radius: 10px;
+  border: none;
 }
 
 .tertiary-button::before {

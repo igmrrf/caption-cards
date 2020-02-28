@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../Cards";
+import Cards from "../../components/Card";
 
 export default function index() {
 	return (

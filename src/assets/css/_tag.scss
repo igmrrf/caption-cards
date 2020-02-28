@@ -1,10 +1,11 @@
 .Tags {
-	padding: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	height: 50vh;
+	overflow: hidden;
 	.single-tag {
+		position: relative;
 		@include tertiaryBtn();
 		color: $tertiary-color;
 		font-weight: bolder;

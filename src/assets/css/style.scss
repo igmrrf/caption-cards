@@ -7,6 +7,8 @@
 @import "./form";
 @import "./banner";
 @import "./random";
+@import "./modal";
+@import "./carousel";
 .tertiary-button {
 	@include tertiaryBtn();
 }

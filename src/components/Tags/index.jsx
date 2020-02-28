@@ -1,13 +1,30 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getTags } from "../../actions/captionAction";
 import CancelIcon from "@material-ui/icons/Cancel";
 
-export default class index extends Component {
+class index extends Component {
+	componentDidMount() {
+		this.props.getTags();
+	}
 	render() {
-		return (
+		const tagsTags = this.props.tags.map(tag => (
 			<div className="single-tag">
-				<p>Tag</p>
+				<p>{tag}</p>
 				<CancelIcon className="icon my-auto" />
 			</div>
-		);
+		));
+		return <div className="Tags">{tagsTags}</div>;
 	}
 }
+
+index.propTypes = {
+	getTags: PropTypes.func.isRequired,
+	Tags: PropTypes.array.isRequired
+};
+
+const mapStateToProps = state => ({
+	tags: state.captions.tags
+});
+export default connect(mapStateToProps, { getTags })(index);

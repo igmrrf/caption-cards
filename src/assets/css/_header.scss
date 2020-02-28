@@ -16,6 +16,17 @@
 			height: 40px;
 		}
 	}
+	.dropdown-menu {
+		background: $primary-color !important;
+
+		.dropdown-item {
+			color: $white-color !important;
+			&:hover {
+				background: $white-color;
+				color: $primary-color !important;
+			}
+		}
+	}
 	.navbar-nav {
 		.nav-link {
 			margin-right: 5px;
@@ -28,18 +39,44 @@
 				box-shadow: 1px 1px 1px 1px $tertiary-color;
 			}
 		}
+		.contribute {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			height: 30px;
+			width: 130px;
+			padding: 0;
+			box-shadow: none;
+			margin-right: 5px;
+			border-radius: 20%;
+			font-weight: 400;
+			font-size: 15px;
+			color: white !important;
+			text-transform: none;
+			@include easeOut();
+			&:hover {
+				@include scaleOut();
+				box-shadow: 1px 1px 1px 1px $tertiary-color;
+			}
+		}
 	}
 	.brand {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin: none;
+		h1 {
+			font-weight: 500;
+			background-clip: text;
+			background: -webkit-linear-gradient(yellow, red, grey, green, white);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 
 		.nav-brand-img {
 			display: inline-block;
 			animation: spin-360 infinite 20s linear;
 			height: 10vh;
-			margin-right: 10px;
 		}
 	}
 }
@@ -48,6 +85,11 @@
 	.navbar {
 		form {
 			display: none;
+		}
+		.brand {
+			h1 {
+				font-size: calc(0.5em + 5vw);
+			}
 		}
 	}
 }
