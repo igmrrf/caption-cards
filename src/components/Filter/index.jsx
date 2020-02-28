@@ -38,15 +38,9 @@ class index extends React.Component {
 						<Form.Check type="checkbox" label="All Tags" />
 						<Form.Check type="checkbox" label="All Captions" />
 					</Form.Group>
+
 					<Form.Group>
 						<Form.Label>Search Tags</Form.Label>
-						<Form.Control
-							placeholder="Enter keyword(s)"
-							onChange={this.onSearch}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Label>Search Captions</Form.Label>
 						<Form.Control
 							placeholder="Enter keyword(s)"
 							onChange={this.onSearch}
